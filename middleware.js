@@ -20,7 +20,7 @@ class InngestTelegramAlerts extends Middleware.BaseMiddleware {
 
     await sendTelegram(formatError({
       appId: this.client.id,
-      fnId: fn.id,
+      fnId: fn.id(),
       error,
     }));
   }

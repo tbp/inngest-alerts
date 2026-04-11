@@ -18,9 +18,6 @@ class InngestTelegramAlerts extends Middleware.BaseMiddleware {
   async onRunError({ fn, error, isFinalAttempt }) {
     if (!isFinalAttempt) return;
 
-    // Skip cancellation errors — they are handled by createCancelledAlertsFunction
-    if (error?.message?.toLowerCase().includes('cancelled')) return;
-
     await sendTelegram(formatError({
       appId: this.client.id,
       fnId: fn.id,

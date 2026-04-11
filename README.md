@@ -9,14 +9,12 @@ Telegram alerts for [Inngest](https://www.inngest.com) functions — notifies on
 ## Installation
 
 ```bash
-npm install github:tbp/inngest-alerts
+npm install github:tbp/inngest-alerts#v1.0.0 --legacy-peer-deps
 ```
 
-To pin a specific version (recommended for production):
-
-```bash
-npm install github:tbp/inngest-alerts#v1.0.0
-```
+> **Note:** `--legacy-peer-deps` is required because npm's peer dependency resolver
+> may fail to match the `inngest@^4` peer when installed from a git source.
+> The packages are fully compatible.
 
 ## Setup
 

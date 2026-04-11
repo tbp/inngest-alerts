@@ -1,0 +1,23 @@
+{
+  "name": "inngest-alerts",
+  "version": "1.0.0",
+  "description": "Telegram alerts for Inngest functions — errors and cancellations",
+  "main": "index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "inngest": "^4"
+  },
+  "peerDependenciesMeta": {
+    "inngest": {
+      "optional": false
+    }
+  },
+  "keywords": ["inngest", "telegram", "alerts", "monitoring"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbp/inngest-alerts.git"
+  }
+}

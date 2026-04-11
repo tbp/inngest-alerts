@@ -38,7 +38,9 @@ function createCancelledAlertsFunction(inngest, options = {}) {
     async ({ event }) => {
       const fnId = event.data?.function_id || 'unknown';
       const runId = event.data?.run_id || '';
-      const reason = event.data?.error?.message || event.data?.error?.error || 'function cancelled';
+      // inngest/function.cancelled data has only: function_id, run_id, correlation_id
+      // There is no "error" field — reason is always the generic label
+      const reason = 'function cancelled';
 
       // Filter by specific function ids if provided
       if (functionIds && functionIds.length > 0 && !functionIds.includes(fnId)) {

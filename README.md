@@ -120,3 +120,4 @@ TELEGRAM_BOT_TOKEN=xxx TELEGRAM_CHAT_ID=yyy node test/send-test-alert.js
 
 - Node >= 20
 - `inngest` ^4 (peer dependency)
+
